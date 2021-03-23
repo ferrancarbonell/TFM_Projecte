@@ -41,7 +41,7 @@ public partial class PlayerController3D {
             float jumpVelocity = Mathf.Sqrt(-2f * gravity * jumpHeight);
             velocityY = jumpVelocity;
             jumpCount++;
-            moveState = MoveState.Jumping;
+            //moveState = MoveState.Jumping;
         }
     }
 }

@@ -18,7 +18,7 @@ public partial class PlayerController3D {
     // How much angle in degrees to ignore when calculating if ground is flat or not (avoids setting 'uphill/downhill' when angle is too low)
     public float ignoreSlopeAngle = 5f;
     // Enum for all move states
-    public enum MoveState { Standing, Jumping, Falling, Crouching, EdgeGrab, EdgeGrabClimbUp, EdgeGrabDrop, ClimbingLadder };
+    public enum MoveState { Standing, Falling, Crouching, EdgeGrab, EdgeGrabClimbUp, EdgeGrabDrop, ClimbingLadder };
     // Should rays and other edits hints be shown in the Scene View?
     public bool debugMode = true;
     // The collision mask for all raycasts

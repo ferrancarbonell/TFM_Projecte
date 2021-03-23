@@ -25,11 +25,11 @@ public partial class PlayerController3D : MonoBehaviour {
         if (debugMode) { Debug.DrawRay(transform.position + new Vector3(0f, myCC.radius + myCC.skinWidth), forward); }
         
         // Jump Input
-        if (input.GetButton(playerId, InputAction.Jump) && !waitingToJump && moveState != MoveState.Jumping) {
+        if (input.GetButton(playerId, InputAction.Jump) && !waitingToJump /*&& moveState != MoveState.Jumping*/) {
             switch (moveState) {
                 case MoveState.Standing:
                     waitingToJump = true;
-                    myAnim.SetTrigger("Jump");
+                    //myAnim.SetTrigger("Jump");
                     StartCoroutine(Jump(jumpDelay));
                     break;
                 case MoveState.Crouching:         
@@ -45,14 +45,14 @@ public partial class PlayerController3D : MonoBehaviour {
                     myAnim.SetBool("ClimbingLadder", false);
                     StartCoroutine(ResetLadder(0.5f));
                     waitingToJump = true;
-                    myAnim.SetTrigger("Jump");
-                    StartCoroutine(Jump(0f));
+                    //myAnim.SetTrigger("Jump");
+                    //StartCoroutine(Jump(0f));
                     break;
                 case MoveState.Falling:
                     if (doubleJumpEnabled && jumpCount <= 1) {
                         waitingToJump = true;
                         //myAnim.SetTrigger("Jump");
-                        StartCoroutine(Jump(0f));
+                        //StartCoroutine(Jump(0f));
                     }
                     break;
             }
@@ -62,9 +62,9 @@ public partial class PlayerController3D : MonoBehaviour {
             case MoveState.Standing:
                 StandingMove(currentSmoothedInput);
                 break;
-            case MoveState.Jumping:
-                JumpingMove(currentSmoothedInput);
-                break;
+            //case MoveState.Jumping:
+                //JumpingMove(currentSmoothedInput);
+                //break;
             case MoveState.Falling:
                 FallingMove(currentSmoothedInput);
                 break;
