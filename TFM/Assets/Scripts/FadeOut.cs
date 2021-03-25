@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class FadeOut : MonoBehaviour
 {
-    public int time = 1;
+    public float time = 5f;
     private float fadeAmount;
 
     Color objectColor;
@@ -17,7 +17,7 @@ public class FadeOut : MonoBehaviour
 
     void Update()
     {
-        fadeAmount = GetComponent<Image>().color.a + (Time.deltaTime);
+        fadeAmount = GetComponent<Image>().color.a + (Time.deltaTime/3);
         objectColor = new Color (objectColor.r, objectColor.g, objectColor.b, fadeAmount);
         gameObject.GetComponent<Image>().color = objectColor;
     }

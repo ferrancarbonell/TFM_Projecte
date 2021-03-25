@@ -26,8 +26,9 @@ public class GameManager : MonoBehaviour
     {
         blackFadeOut.SetActive (true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController3D>().PlayerDeath();
         GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController3D>().enabled = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);
     }

@@ -54,6 +54,8 @@ public partial class PlayerController3D {
     // Cache the Input Manager on start
     private IInputManager input;
 
+    private bool isDeath;
+
     // SphereCastData and CapsuleCastData are only used for Debug Mode to draw SphereCasts and CapsuleCasts in the Editor Window
     public struct SphereCastData {
         public Vector3 start;

@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 3440
     height: 1307
-  m_MinSize: {x: 911, y: 392}
+  m_MinSize: {x: 811, y: 392}
   m_MaxSize: {x: 22006, y: 14042}
   vertical: 0
-  controlID: 639
+  controlID: 60
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 0
     width: 2790
     height: 1307
-  m_MinSize: {x: 635, y: 392}
+  m_MinSize: {x: 535, y: 392}
   m_MaxSize: {x: 18005, y: 14042}
   vertical: 0
-  controlID: 552
+  controlID: 61
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,10 +163,10 @@ MonoBehaviour:
     y: 0
     width: 1715
     height: 1307
-  m_MinSize: {x: 201, y: 342}
+  m_MinSize: {x: 101, y: 242}
   m_MaxSize: {x: 4001, y: 8042}
   vertical: 1
-  controlID: 646
+  controlID: 62
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,7 +177,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: AnimatorControllerTool
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -186,15 +186,15 @@ MonoBehaviour:
     y: 0
     width: 1715
     height: 670
-  m_MinSize: {x: 201, y: 221}
+  m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,7 +271,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 392}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 553
+  controlID: 108
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -478,9 +478,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.2294109, y: 2.5026698, z: 0.23544474}
+    m_Target: {x: 0.527532, y: 1.3253937, z: -0.39140797}
     speed: 2
-    m_Value: {x: 1.2294109, y: 2.5026698, z: 0.23544474}
+    m_Value: {x: 0.527532, y: 1.3253937, z: -0.39140797}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -526,13 +526,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.0047084377, y: 0.206114, z: -0.0009798091, w: -0.9785534}
+    m_Target: {x: -0.034633745, y: -0.09818801, z: 0.0034322522, w: -0.99459547}
     speed: 2
-    m_Value: {x: -0.004708266, y: 0.20610647, z: -0.0009797734, w: -0.9785177}
+    m_Value: {x: -0.034632493, y: -0.09818447, z: 0.0034321283, w: -0.9945595}
   m_Size:
-    m_Target: 5.6365004
+    m_Target: 1.7364998
     speed: 2
-    m_Value: 5.6365004
+    m_Value: 1.7364998
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -661,7 +661,7 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 0
+  m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 --- !u!114 &19
@@ -693,9 +693,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: badaffff
       m_LastClickedID: 0
-      m_ExpandedIDs: 049bffff68fbffff283400002c3400007e3400008e340000d2340000
+      m_ExpandedIDs: 0ceffefffceffeffcebbffff54ccffff2afbffff40fbffff66fbffff68fbffff3034000090340000e6340000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -758,20 +758,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Characters/Flema/Animatons
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Characters/Flema/Animatons
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\Ferran\Documents\Unity\TFM_Projecte\TFM
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: e0360000
-    m_LastClickedID: 14048
-    m_ExpandedIDs: 00000000de360000e0360000e2360000e4360000f2360000fa36000000ca9a3b
+    m_SelectedIDs: cc3c0000
+    m_LastClickedID: 15564
+    m_ExpandedIDs: 00000000f2360000f4360000f6360000f8360000fa360000043700000837000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -799,7 +799,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000de360000e0360000e2360000e4360000e636000000ca9a3b
+    m_ExpandedIDs: 00000000f2360000f4360000f6360000f8360000fa360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -830,18 +830,18 @@ MonoBehaviour:
     m_ExpandedInstanceIDs: c62300001834000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Animatons
+      m_OriginalName: Animatons
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 15564
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 12}
     m_CreateAssetUtility:

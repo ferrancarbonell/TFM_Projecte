@@ -4,7 +4,9 @@ using System.Collections;
 public partial class PlayerController3D : MonoBehaviour {
         
     // Use this for initialization
-    void Start() {
+    void Start()
+    {
+        isDeath = false;
         input = InputManager.instance;
         myCC = GetComponent<CharacterController>();
         myAnim = GetComponent<Animator>();
@@ -16,135 +18,141 @@ public partial class PlayerController3D : MonoBehaviour {
     }
 
     // Update is called once per frame
-    void Update() {
-        currentNormalizedInput = new Vector2(input.GetAxis(playerId, InputAction.MoveHorizontal), input.GetAxis(playerId, InputAction.MoveVertical)).normalized;
-        currentSmoothedInput = Vector2.SmoothDamp(currentSmoothedInput, currentNormalizedInput, ref smoothedInputVelocity, inputSmoothTime, Mathf.Infinity, Time.deltaTime);
-        running = input.GetButton(playerId, InputAction.Run);
-        if (debugMode) { allSphereCastData.Clear(); allCapsuleCastData.Clear(); }
-        CheckForGround();    
-        if (debugMode) { Debug.DrawRay(transform.position + new Vector3(0f, myCC.radius + myCC.skinWidth), forward); }
-        
-        // Jump Input
-        if (input.GetButton(playerId, InputAction.Jump) && !waitingToJump /*&& moveState != MoveState.Jumping*/) {
-            switch (moveState) {
-                case MoveState.Standing:
-                    waitingToJump = true;
-                    //myAnim.SetTrigger("Jump");
-                    StartCoroutine(Jump(jumpDelay));
-                    break;
-                case MoveState.Crouching:         
-                    break;
-                case MoveState.EdgeGrab:
-                    break;
-                case MoveState.EdgeGrabClimbUp:
-                    break;
-                case MoveState.EdgeGrabDrop:
-                    break;
-                case MoveState.ClimbingLadder:
-                    // Jump from ladder position
-                    myAnim.SetBool("ClimbingLadder", false);
-                    StartCoroutine(ResetLadder(0.5f));
-                    waitingToJump = true;
-                    //myAnim.SetTrigger("Jump");
-                    //StartCoroutine(Jump(0f));
-                    break;
-                case MoveState.Falling:
-                    if (doubleJumpEnabled && jumpCount <= 1) {
+    void Update()
+    {
+        if (!isDeath)
+        {
+            currentNormalizedInput = new Vector2(input.GetAxis(playerId, InputAction.MoveHorizontal), input.GetAxis(playerId, InputAction.MoveVertical)).normalized;
+            currentSmoothedInput = Vector2.SmoothDamp(currentSmoothedInput, currentNormalizedInput, ref smoothedInputVelocity, inputSmoothTime, Mathf.Infinity, Time.deltaTime);
+            running = input.GetButton(playerId, InputAction.Run);
+            if (debugMode) { allSphereCastData.Clear(); allCapsuleCastData.Clear(); }
+            CheckForGround();    
+            if (debugMode) { Debug.DrawRay(transform.position + new Vector3(0f, myCC.radius + myCC.skinWidth), forward); }
+            
+            // Jump Input
+            if (input.GetButton(playerId, InputAction.Jump) && !waitingToJump /*&& moveState != MoveState.Jumping*/) {
+                switch (moveState) {
+                    case MoveState.Standing:
+                        waitingToJump = true;
+                        //myAnim.SetTrigger("Jump");
+                        StartCoroutine(Jump(jumpDelay));
+                        break;
+                    case MoveState.Crouching:         
+                        break;
+                    case MoveState.EdgeGrab:
+                        break;
+                    case MoveState.EdgeGrabClimbUp:
+                        break;
+                    case MoveState.EdgeGrabDrop:
+                        break;
+                    case MoveState.ClimbingLadder:
+                        // Jump from ladder position
+                        myAnim.SetBool("ClimbingLadder", false);
+                        StartCoroutine(ResetLadder(0.5f));
                         waitingToJump = true;
                         //myAnim.SetTrigger("Jump");
                         //StartCoroutine(Jump(0f));
-                    }
+                        break;
+                    case MoveState.Falling:
+                        if (doubleJumpEnabled && jumpCount <= 1) {
+                            waitingToJump = true;
+                            //myAnim.SetTrigger("Jump");
+                            //StartCoroutine(Jump(0f));
+                        }
+                        break;
+                }
+            }
+
+            switch (moveState)
+            {
+                case MoveState.Standing:
+                    StandingMove(currentSmoothedInput);
+                    break;
+                //case MoveState.Jumping:
+                    //JumpingMove(currentSmoothedInput);
+                    //break;
+                case MoveState.Falling:
+                    FallingMove(currentSmoothedInput);
+                    break;
+                case MoveState.EdgeGrab:
+                    EdgeGrabMove(currentNormalizedInput);
+                    break;
+                case MoveState.EdgeGrabClimbUp:
+                    EdgeGrabClimbUp();
+                    break;
+                case MoveState.EdgeGrabDrop:
+                    EdgeGrabDrop(currentSmoothedInput);
+                    break;
+                case MoveState.Crouching:
+                    CrouchMove(currentSmoothedInput);
+                    break;
+                case MoveState.ClimbingLadder:
+                    ClimbingLadderMove(currentNormalizedInput);
                     break;
             }
-        }
 
-        switch (moveState) {
-            case MoveState.Standing:
-                StandingMove(currentSmoothedInput);
-                break;
-            //case MoveState.Jumping:
-                //JumpingMove(currentSmoothedInput);
-                //break;
-            case MoveState.Falling:
-                FallingMove(currentSmoothedInput);
-                break;
-            case MoveState.EdgeGrab:
-                EdgeGrabMove(currentNormalizedInput);
-                break;
-            case MoveState.EdgeGrabClimbUp:
-                EdgeGrabClimbUp();
-                break;
-            case MoveState.EdgeGrabDrop:
-                EdgeGrabDrop(currentSmoothedInput);
-                break;
-            case MoveState.Crouching:
-                CrouchMove(currentSmoothedInput);
-                break;
-            case MoveState.ClimbingLadder:
-                ClimbingLadderMove(currentNormalizedInput);
-                break;
-        }
-
-        if (lockZAxis == true) {
-            transform.position = new Vector3(transform.position.x, transform.position.y, zAxis);
-        }
-
-        // Animator Control
-        float animSpeedPercent = currentSpeed / runSpeed;
-        myAnim.SetFloat("Speed", animSpeedPercent, speedSmoothTime, Time.deltaTime);
-
-        // Grounded for animations
-        if (grounded == true) {
-            if (myAnim.GetBool("Grounded") == false) myAnim.SetBool("Grounded", true);
-            if (landingJump == true) landingJump = false;            
-            // Crouch Input
-            if (input.GetButton(playerId, InputAction.Crouch)) {
-                if (moveState == MoveState.ClimbingLadder) {
-                    LadderDismount();
-                }
-                else {
-                    moveState = MoveState.Crouching;
-                    myAnim.SetBool("Crouching", true);
-                }                
+            if (lockZAxis == true)
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y, zAxis);
             }
-            else {
-                if (moveState == MoveState.Crouching) {
-                    // Spherecast for head clearance
-                    Vector3 end = new Vector3(transform.position.x, transform.position.y + crouchingHeadClearance, transform.position.z);
-                    RaycastHit crouchHeadhit;                    
-                    if (Physics.SphereCast(transform.position, myCC.radius, Vector3.up, out crouchHeadhit, Vector3.Distance(transform.position, end), raycastCollisionMask)) {
-                        // Something above player's head, do not stand up
+
+            // Animator Control
+            float animSpeedPercent = currentSpeed / runSpeed;
+            myAnim.SetFloat("Speed", animSpeedPercent, speedSmoothTime, Time.deltaTime);
+
+            // Grounded for animations
+            if (grounded == true) {
+                if (myAnim.GetBool("Grounded") == false) myAnim.SetBool("Grounded", true);
+                if (landingJump == true) landingJump = false;            
+                // Crouch Input
+                if (input.GetButton(playerId, InputAction.Crouch)) {
+                    if (moveState == MoveState.ClimbingLadder) {
+                        LadderDismount();
                     }
                     else {
-                        if (grounded) {
-                            moveState = MoveState.Standing;
-                            myAnim.SetBool("Crouching", false);
+                        moveState = MoveState.Crouching;
+                        myAnim.SetBool("Crouching", true);
+                    }                
+                }
+                else {
+                    if (moveState == MoveState.Crouching) {
+                        // Spherecast for head clearance
+                        Vector3 end = new Vector3(transform.position.x, transform.position.y + crouchingHeadClearance, transform.position.z);
+                        RaycastHit crouchHeadhit;                    
+                        if (Physics.SphereCast(transform.position, myCC.radius, Vector3.up, out crouchHeadhit, Vector3.Distance(transform.position, end), raycastCollisionMask)) {
+                            // Something above player's head, do not stand up
                         }
                         else {
-                            moveState = MoveState.Falling;
-                            myAnim.SetBool("Crouching", false);
-                        }                        
+                            if (grounded) {
+                                moveState = MoveState.Standing;
+                                myAnim.SetBool("Crouching", false);
+                            }
+                            else {
+                                moveState = MoveState.Falling;
+                                myAnim.SetBool("Crouching", false);
+                            }                        
+                        }
                     }
                 }
             }
-        }
-        else {
-            myAnim.SetBool("Grounded", false);
-        }
+            else {
+                myAnim.SetBool("Grounded", false);
+            }
 
-        // Dynamic Character Controller Bounds
-        //bodyY = Mathf.Max(Vector3.Distance(toeLeft.position, backOfHead.position), Vector3.Distance(toeRight.position, backOfHead.position)); // Not using Toe position anymore
-        float bodyY = 0f;
-        if (staticCCBoundsCrouching && moveState == MoveState.Crouching) {
-            bodyY = ccCrouchingHeight;
-        } else if (staticCCBoundsClimbing && moveState == MoveState.EdgeGrabClimbUp) {            
-            bodyY = ccClimbingHeight;
-        } else {
-            bodyY = Vector3.Distance(transform.position, backOfHead.position);
+            // Dynamic Character Controller Bounds
+            //bodyY = Mathf.Max(Vector3.Distance(toeLeft.position, backOfHead.position), Vector3.Distance(toeRight.position, backOfHead.position)); // Not using Toe position anymore
+            float bodyY = 0f;
+            if (staticCCBoundsCrouching && moveState == MoveState.Crouching) {
+                bodyY = ccCrouchingHeight;
+            } else if (staticCCBoundsClimbing && moveState == MoveState.EdgeGrabClimbUp) {            
+                bodyY = ccClimbingHeight;
+            } else {
+                bodyY = Vector3.Distance(transform.position, backOfHead.position);
+            }
+            bodyCenter = new Vector3(transform.position.x, transform.position.y + bodyY / 2, transform.position.z);
+            myCC.height = bodyY;
+            myCC.center = transform.InverseTransformPoint(bodyCenter);
         }
-        bodyCenter = new Vector3(transform.position.x, transform.position.y + bodyY / 2, transform.position.z);
-        myCC.height = bodyY;
-        myCC.center = transform.InverseTransformPoint(bodyCenter);
     }
 
     // Check for edge climing here!    
@@ -175,5 +183,11 @@ public partial class PlayerController3D : MonoBehaviour {
         }        
         //Debug.DrawLine(origin, origin + direction * currentHitDistance);
         //Gizmos.DrawWireSphere(origin + direction * currentHitDistance, sphereRadius);
+    }
+
+    public void PlayerDeath()
+    {
+        isDeath = true;
+        myAnim.SetBool("Death", true);
     }
 }
