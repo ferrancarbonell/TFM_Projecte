@@ -15,7 +15,9 @@ public class AlarmBehaviour : MonoBehaviour
     public enum AlarmStateStart {Blue, Red};
     public AlarmStateStart alarmStateStart;
 
+
     private bool changeMaterial;
+    private DoorBehaviour door;
     public bool activatedFireBall;
 
     void Start()
@@ -38,8 +40,7 @@ public class AlarmBehaviour : MonoBehaviour
                 activatedFireBall = false;
             if (alarmStateStart == AlarmStateStart.Red)
                 activatedFireBall = true;
-        }
-                
+        }        
     }
 
     public void ChangeState ()
@@ -70,6 +71,25 @@ public class AlarmBehaviour : MonoBehaviour
                 gameObject.GetComponent<Light>().color = Color.cyan;
 
             activatedFireBall = !activatedFireBall;
+        }
+
+        if (changeMovement)
+        {
+            door = gameObject.GetComponent<DoorBehaviour>();
+            if (door.activated)
+            {
+                if (!door.opened)
+                {
+                    Debug.Log("obra la porta");
+                    door.OpenDoor();
+                }
+                else//if (door.opened)
+                {
+                    Debug.Log("tanca la porta");
+                    door.CloseDoor();
+                }
+                    
+            }
         }
     }
 }
