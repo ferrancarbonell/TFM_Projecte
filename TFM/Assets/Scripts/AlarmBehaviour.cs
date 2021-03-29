@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -80,12 +80,12 @@ public class AlarmBehaviour : MonoBehaviour
             {
                 if (!door.opened)
                 {
-                    Debug.Log("obra la porta");
+                    //Debug.Log("obra la porta");
                     door.OpenDoor();
                 }
-                else//if (door.opened)
+                else
                 {
-                    Debug.Log("tanca la porta");
+                    //Debug.Log("tanca la porta");
                     door.CloseDoor();
                 }
                     

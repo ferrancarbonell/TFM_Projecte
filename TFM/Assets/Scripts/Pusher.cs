@@ -10,7 +10,7 @@ public class Pusher : MonoBehaviour
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void OnTriggerEnter(Collider other)
