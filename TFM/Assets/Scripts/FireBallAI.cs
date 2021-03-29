@@ -37,14 +37,23 @@ public class FireBallAI : MonoBehaviour
             myRigidbody.velocity = new Vector3 (0,0,0);
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player" && enemyState == EnemyState.alive)
         {
             Debug.Log ("Player death");
 
             GameObject.Find("GameManager").GetComponent<GameManager>().GameOver();
-        }
-            
+        }   
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player" && enemyState == EnemyState.alive)
+        {
+            Debug.Log ("Player death");
+
+            GameObject.Find("GameManager").GetComponent<GameManager>().GameOver();
+        }   
     }
 }

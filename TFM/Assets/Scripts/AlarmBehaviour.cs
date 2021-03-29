@@ -14,10 +14,13 @@ public class AlarmBehaviour : MonoBehaviour
     public Material redMat;
     public enum AlarmStateStart {Blue, Red};
     public AlarmStateStart alarmStateStart;
+    public enum MovementType {Door, Platform};
+    public MovementType movementType;
 
 
     private bool changeMaterial;
     private DoorBehaviour door;
+    private PlatformBehaviour platform;
     public bool activatedFireBall;
 
     void Start()
@@ -63,8 +66,7 @@ public class AlarmBehaviour : MonoBehaviour
         }
 
         if (fireBall)
-        {
-            
+        { 
             if (activatedFireBall)
                 gameObject.GetComponent<Light>().color = Color.red;
             if (!activatedFireBall)
@@ -75,20 +77,25 @@ public class AlarmBehaviour : MonoBehaviour
 
         if (changeMovement)
         {
-            door = gameObject.GetComponent<DoorBehaviour>();
-            if (door.activated)
+            if (movementType == MovementType.Door)
             {
-                if (!door.opened)
+                door = gameObject.GetComponent<DoorBehaviour>();
+                if (door.activated)
                 {
-                    //Debug.Log("obra la porta");
-                    door.OpenDoor();
+                    if (!door.opened)
+                        door.OpenDoor();
+                    else
+                        door.CloseDoor();
                 }
+            }
+
+            if (movementType == MovementType.Platform)
+            {
+                platform = gameObject.GetComponent<PlatformBehaviour>();
+                if (!platform.activated)
+                    platform.Activate();
                 else
-                {
-                    //Debug.Log("tanca la porta");
-                    door.CloseDoor();
-                }
-                    
+                    platform.Disactivate();
             }
         }
     }

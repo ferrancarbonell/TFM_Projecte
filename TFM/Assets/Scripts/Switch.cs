@@ -7,8 +7,8 @@ public class Switch : MonoBehaviour
     public GameObject target;
     private bool ready = false;
     private bool activated = false;
-    private enum AlarmStateStart {door, light, platform};
-    private AlarmStateStart alarmStateStart;
+    private enum targetType {door, light, platform};
+    private targetType alarmStateStart;
 
     void Start()
     {
