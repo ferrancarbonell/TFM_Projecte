@@ -11,10 +11,12 @@ public class AlarmManager : MonoBehaviour
     public GameObject redFlag;
 
     private float increase = 0;
+    private AlarmBehaviour[] afectedObjects;
 
     void Start()
     {
         alarmState = AlarmState.Blue;
+        afectedObjects = GameObject.Find("AlarmAssets").GetComponentsInChildren<AlarmBehaviour>();
     }
 
     void Update()
@@ -26,31 +28,26 @@ public class AlarmManager : MonoBehaviour
         else
         {
             ChangeState();
-        }
-        
-        
+        } 
     }
 
     private void ChangeState()
     {
-        var afectedObjects = GameObject.Find("AlarmAssets").GetComponentsInChildren<AlarmBehaviour>();
-
-        if (alarmState == AlarmState.Blue)
+        switch (alarmState)
         {
+        case AlarmState.Blue: 
             alarmState = AlarmState.Red;
             redFlag.SetActive(true);
             blueFlag.SetActive(false);
+            break;
             //Debug.Log("Red State");
-        }
-        else
-        {
-            if (alarmState == AlarmState.Red)
-            {
+
+        case AlarmState.Red:
             alarmState = AlarmState.Blue;
             redFlag.SetActive(false);
             blueFlag.SetActive(true);
+            break;
             //Debug.Log("Blue State");
-            }
         }
 
         foreach (var currentAfectedObject in afectedObjects)

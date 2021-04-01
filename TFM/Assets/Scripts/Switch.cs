@@ -10,45 +10,41 @@ public class Switch : MonoBehaviour
     private enum targetType {door, light, platform};
     private targetType alarmStateStart;
 
-    void Start()
-    {
-    }
     void Update()
     {
         if (Input.GetButtonDown("Fire1") && ready)
-        {
-            if (!activated)
-                Activate();
-            if (activated)
-                Disactivate();
-            
-            activated = !activated;
-        }
+            ToggleActivity();
     }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
-        {
             ready = true;
-        }
     }
 
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
-        {
             ready = false;
-        }
     }
 
     void Activate()
     {
         target.GetComponent<DoorBehaviour>().Activate();
+        activated = true;
     }
 
-    void Disactivate()
+    void Deactivate()
     {
-        target.GetComponent<DoorBehaviour>().Disactivate();
+        target.GetComponent<DoorBehaviour>().Deactivate();
+        activated =  false;
     }
+
+    void ToggleActivity()
+    {
+        if (activated)
+            Deactivate();
+        else
+            Activate();
+}
 }

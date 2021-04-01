@@ -8,16 +8,17 @@ public class FireBallAI : MonoBehaviour
 	public float move = -0.1f;
 	public float distance = 0.5f;
 
-    enum EnemyState {alive, inactive}
-	EnemyState enemyState;
-    Rigidbody myRigidbody;
-    AlarmBehaviour alarmBehaviour;
+    private enum EnemyState {alive, inactive}
+	private EnemyState enemyState;
+    private Rigidbody myRigidbody;
+    private AlarmBehaviour alarmBehaviour;
+    private GameManager gameManager;
 
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody>();
         alarmBehaviour = GetComponent<AlarmBehaviour>();
-
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         enemyState = EnemyState.alive;
     }
 
@@ -39,21 +40,13 @@ public class FireBallAI : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player" && enemyState == EnemyState.alive)
-        {
-            Debug.Log ("Player death");
-
-            GameObject.Find("GameManager").GetComponent<GameManager>().GameOver();
-        }   
+        if (gameManager.isPlayerAlive && other.tag == "Player" && enemyState == EnemyState.alive)
+            gameManager.GameOver();
     }
 
     void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player" && enemyState == EnemyState.alive)
-        {
-            Debug.Log ("Player death");
-
-            GameObject.Find("GameManager").GetComponent<GameManager>().GameOver();
-        }   
+        if (gameManager.isPlayerAlive && other.tag == "Player" && enemyState == EnemyState.alive)
+            gameManager.GameOver();
     }
 }

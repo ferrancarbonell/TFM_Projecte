@@ -28,7 +28,7 @@ public class Pusher : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             activate = false;
-            target.GetComponent<DoorBehaviour>().Disactivate();
+            target.GetComponent<DoorBehaviour>().Deactivate();
             anim.SetBool ("Activate", activate);
         }
     }

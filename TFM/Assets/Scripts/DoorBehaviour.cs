@@ -46,7 +46,7 @@ public class DoorBehaviour : MonoBehaviour
 
         OpenDoor();
     }
-    public void Disactivate()
+    public void Deactivate()
     {
         activated = false;
         mesh.GetComponent<MeshRenderer>().material = oldMat;
