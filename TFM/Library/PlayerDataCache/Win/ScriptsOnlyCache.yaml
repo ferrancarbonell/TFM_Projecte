@@ -5,15 +5,17 @@ ScriptsOnlyBuild:
     - AlarmManager
     - CameraFollow3D
     - DoorBehaviour
-    - FadeIn
-    - FadeOut
+    - Fade
     - FireBallAI
     - GameManager
+    - HurtPlayer
     - MenuManager
     - PauseControl
     - PlatformBehaviour
     - PlayerController3D
     - Pusher
+    - RobotAI
+    - Rock
     - Switch
     - UnityInputManager
     Unity.Rider.Editor.dll:
@@ -30,6 +32,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateMachineInspector
     - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
@@ -86,49 +89,53 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11274}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 11290}
+      Script: {instanceID: 11278}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11294}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11532}
+      Script: {instanceID: 11372}
     - Class: 114
-      Script: {instanceID: 11534}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 11696}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11878}
+      Script: {instanceID: 11540}
     - Class: 114
-      Script: {instanceID: 12056}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 12250}
+      Script: {instanceID: 11884}
     - Class: 114
-      Script: {instanceID: 12272}
+      Script: {instanceID: 12064}
     - Class: 114
-      Script: {instanceID: 12280}
+      Script: {instanceID: 12284}
     - Class: 114
-      Script: {instanceID: 12322}
+      Script: {instanceID: 12312}
     - Class: 114
-      Script: {instanceID: 12368}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12502}
+      Script: {instanceID: 12374}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12512}
     - Class: 114
-      Script: {instanceID: 12762}
+      Script: {instanceID: 12690}
     - Class: 114
-      Script: {instanceID: 12786}
+      Script: {instanceID: 12712}
     - Class: 114
-      Script: {instanceID: 13122}
+      Script: {instanceID: 12774}
+    - Class: 114
+      Script: {instanceID: 12798}
+    - Class: 114
+      Script: {instanceID: 13102}
     - Class: 114
       Script: {instanceID: 13138}
     - Class: 114
-      Script: {instanceID: 13164}
+      Script: {instanceID: 13154}
     - Class: 114
-      Script: {instanceID: 13174}
+      Script: {instanceID: 13188}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -143,7 +150,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
+    - Class: 195
+      Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 208
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -152,6 +163,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 238
       Script: {instanceID: 0}
     - Class: 258
       Script: {instanceID: 0}
@@ -175,29 +188,29 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11274}
+      Script: {instanceID: 11256}
     - Class: 114
-      Script: {instanceID: 11480}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11878}
+      Script: {instanceID: 11278}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 12272}
+      Script: {instanceID: 11884}
     - Class: 114
-      Script: {instanceID: 12502}
+      Script: {instanceID: 11912}
     - Class: 114
-      Script: {instanceID: 12516}
+      Script: {instanceID: 12512}
     - Class: 114
-      Script: {instanceID: 12700}
+      Script: {instanceID: 12526}
     - Class: 114
-      Script: {instanceID: 12762}
+      Script: {instanceID: 12712}
     - Class: 114
-      Script: {instanceID: 12920}
+      Script: {instanceID: 12774}
     - Class: 114
-      Script: {instanceID: 13122}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 18536}
+      Script: {instanceID: 13138}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -215,6 +228,18 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MenuManager
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
@@ -245,6 +270,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: cfe5837bfcd8fad4edb0e65fda31fdcb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RobotAI
   - hash:
       serializedVersion: 2
       Hash: 66bca5cc6a18c5298ec75235e56a84d6
@@ -379,7 +410,7 @@ ScriptsOnlyBuild:
     className: RectMask2D
   - hash:
       serializedVersion: 2
-      Hash: af88132c13e479d9e242046861c0e82b
+      Hash: 2149bf124ab5ede8107a59f7603f7ff5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -475,22 +506,10 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 79f1e4d923cfc803b34c05ae2cb73dac
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FadeIn
-  - hash:
-      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: aab9ceb2d84fcb008d095c1b0a95473c
@@ -505,13 +524,19 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HurtPlayer
+  - hash:
+      serializedVersion: 2
       Hash: 260ffedbeb489bab36b348957c818af0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraFollow3D
   - hash:
       serializedVersion: 2
-      Hash: 8be19f8681407ca4159248bb1cb2e6a0
+      Hash: 7b1dae3cb81d8846c049d25377eb0ad7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AlarmBehaviour
@@ -569,6 +594,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Rock
   - hash:
       serializedVersion: 2
       Hash: 6939772cb3ce775a8e8d99f332534491
@@ -656,6 +687,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Fade
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
     className: TestRunCallbackListener
@@ -703,12 +740,6 @@ ScriptsOnlyBuild:
     className: Slider
   - hash:
       serializedVersion: 2
-      Hash: 79f1e4d923cfc803b34c05ae2cb73dac
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FadeOut
-  - hash:
-      serializedVersion: 2
       Hash: 0fd6822f6177297bd0eb4d83cc7a9030
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -725,12 +756,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MenuManager
   platform: 5
   scenePathNames:
   - Assets/Scenes/MainMenu.unity

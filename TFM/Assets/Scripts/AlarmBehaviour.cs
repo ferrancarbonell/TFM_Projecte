@@ -5,17 +5,18 @@ using UnityEngine;
 public class AlarmBehaviour : MonoBehaviour
 {
     public bool changeColor = false;
+    public Material blueMat;
+    public Material redMat;
     public bool changeMovement = false;
+    public enum MovementType {Door, Platform};
+    public MovementType movementType;
     public bool disappear = false;
     public bool turnLight = false;
     public bool fireBall = false;
 
-    public Material blueMat;
-    public Material redMat;
     public enum AlarmStateStart {Blue, Red};
     public AlarmStateStart alarmStateStart;
-    public enum MovementType {Door, Platform};
-    public MovementType movementType;
+
 
 
     private bool changeMaterial;

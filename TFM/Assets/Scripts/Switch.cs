@@ -37,7 +37,7 @@ public class Switch : MonoBehaviour
     void Deactivate()
     {
         target.GetComponent<DoorBehaviour>().Deactivate();
-        activated =  false;
+        activated = false;
     }
 
     void ToggleActivity()
