@@ -7,6 +7,7 @@ public class Pusher : MonoBehaviour
     public GameObject target;
     private Animator anim;
     private bool activate = false;
+    private bool rockOver = false;
 
     void Start()
     {
@@ -17,9 +18,36 @@ public class Pusher : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            activate = true;
-            target.GetComponent<DoorBehaviour>().Activate();
-            anim.SetBool ("Activate", activate);
+            if (!activate)
+            {
+                activate = true;
+                target.GetComponent<DoorBehaviour>().Activate();
+                anim.SetBool ("Activate", activate);
+            }
+        }
+
+        if (other.gameObject.tag == "Enemy")
+        {
+            if (!activate)
+            {
+                activate = true;
+                target.GetComponent<DoorBehaviour>().Activate();
+                anim.SetBool ("Activate", activate);
+                rockOver = true;
+            }
+        }
+    }
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            if (!activate)
+            {
+                activate = true;
+                target.GetComponent<DoorBehaviour>().Activate();
+                anim.SetBool ("Activate", activate);
+            }
         }
     }
 
@@ -27,9 +55,12 @@ public class Pusher : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            activate = false;
-            target.GetComponent<DoorBehaviour>().Deactivate();
-            anim.SetBool ("Activate", activate);
+            if (!rockOver)
+            {
+                activate = false;
+                target.GetComponent<DoorBehaviour>().Deactivate();
+                anim.SetBool ("Activate", activate);
+            }
         }
     }
 }
