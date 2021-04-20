@@ -12,7 +12,7 @@ public class Switch : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && ready)
+        if (Input.GetButtonDown("A") && ready)
             ToggleActivity();
     }
 
