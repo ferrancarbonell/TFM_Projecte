@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     {
         isPlayerAlive = false;
         blackFader.GetComponent<Fade>().FadeOut();
-        GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().enabled = false;
+        //GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().enabled = false;
         //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController3D>().PlayerDeath();
         //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController3D>().enabled = false;
         Debug.Log ("Player death");
