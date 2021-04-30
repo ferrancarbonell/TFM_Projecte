@@ -29,8 +29,10 @@ public class GameManager : MonoBehaviour
         isPlayerAlive = false;
         blackFader.GetComponent<Fade>().FadeOut();
         //GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().enabled = false;
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController3D>().PlayerDeath();
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController3D>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider>().enabled = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().isKinematic = true;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().velocity = Vector3.zero;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         Debug.Log ("Player death");
         
         yield return new WaitForSeconds(3f);

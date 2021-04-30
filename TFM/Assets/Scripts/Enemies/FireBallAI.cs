@@ -35,7 +35,9 @@ public class FireBallAI : MonoBehaviour
         if (enemyState == EnemyState.alive)
             myRigidbody.velocity = new Vector3 (move * maxSpeed, myRigidbody.velocity.y,myRigidbody.velocity.y);
         if (enemyState == EnemyState.inactive)
-            myRigidbody.velocity = new Vector3 (0,0,0);
+        {
+            myRigidbody.velocity = Vector3.zero;
+        }
     }
 
     void OnTriggerEnter(Collider other)
