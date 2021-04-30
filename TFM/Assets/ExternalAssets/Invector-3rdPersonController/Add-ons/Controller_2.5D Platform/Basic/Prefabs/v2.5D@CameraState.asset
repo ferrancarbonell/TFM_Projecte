@@ -19,7 +19,7 @@ MonoBehaviour:
     right: 0
     defaultDistance: 6
     maxDistance: 8
-    minDistance: 0.6
+    minDistance: 5
     height: 1
     smooth: 10
     smoothDamp: 4
@@ -40,10 +40,10 @@ MonoBehaviour:
   - Name: Distance
     forward: -1
     right: 0.6
-    defaultDistance: 10
+    defaultDistance: 6
     maxDistance: 8
     minDistance: 0.6
-    height: -1
+    height: 1
     smooth: 10
     smoothDamp: 4
     xMouseSensitivity: 0
@@ -53,33 +53,10 @@ MonoBehaviour:
     xMinLimit: -360
     xMaxLimit: 360
     rotationOffSet: {x: 0, y: 0, z: 0}
-    cullingHeight: 0.85
+    cullingHeight: 0
     cullingMinDist: 0.01
     fov: 60
     useZoom: 0
     fixedAngle: {x: 0, y: 10}
-    lookPoints: []
-    cameraMode: 1
-  - Name: New State2
-    forward: 1
-    right: 0
-    defaultDistance: 1.5
-    maxDistance: 3
-    minDistance: 0.5
-    height: 0
-    smooth: 10
-    smoothDamp: 0
-    xMouseSensitivity: 3
-    yMouseSensitivity: 3
-    yMinLimit: -40
-    yMaxLimit: 80
-    xMinLimit: -360
-    xMaxLimit: 360
-    rotationOffSet: {x: 0, y: 0, z: 0}
-    cullingHeight: 0.2
-    cullingMinDist: 0.1
-    fov: 60
-    useZoom: 0
-    fixedAngle: {x: 0, y: 0}
     lookPoints: []
     cameraMode: 0

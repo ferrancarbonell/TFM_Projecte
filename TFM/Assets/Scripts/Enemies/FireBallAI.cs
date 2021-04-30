@@ -7,6 +7,7 @@ public class FireBallAI : MonoBehaviour
     public float maxSpeed = 10f;
 	public float move = -0.1f;
 	public float distance = 0.5f;
+    public GameObject damage;
 
     private enum EnemyState {alive, inactive}
 	private EnemyState enemyState;
@@ -25,9 +26,15 @@ public class FireBallAI : MonoBehaviour
     void Update()
     {
         if (!alarmBehaviour.activatedFireBall)
+        {
             enemyState = EnemyState.alive;
+            damage.SetActive(true);
+        }
         if (alarmBehaviour.activatedFireBall)
+        {
             enemyState = EnemyState.inactive;
+            damage.SetActive(false);
+        }
     }
 
     void FixedUpdate() 
@@ -35,9 +42,7 @@ public class FireBallAI : MonoBehaviour
         if (enemyState == EnemyState.alive)
             myRigidbody.velocity = new Vector3 (move * maxSpeed, myRigidbody.velocity.y,myRigidbody.velocity.y);
         if (enemyState == EnemyState.inactive)
-        {
             myRigidbody.velocity = Vector3.zero;
-        }
     }
 
     void OnTriggerEnter(Collider other)
