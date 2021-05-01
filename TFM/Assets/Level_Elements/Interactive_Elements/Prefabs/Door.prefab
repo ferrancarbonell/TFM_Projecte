@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6048877420074350437}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.968, y: 1.32, z: 15.646424}
   m_LocalScale: {x: 0.15417, y: 2.0539522, z: 1}
   m_Children:
@@ -81,12 +81,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeColor: 0
+  blueMat: {fileID: 2100000, guid: ab1087bf7b3e1214db1f4a2f7220ceac, type: 2}
+  redMat: {fileID: 2100000, guid: 6828403bbf15e9f40b0587c1594138e2, type: 2}
   changeMovement: 1
+  movementType: 0
   disappear: 0
   turnLight: 0
   fireBall: 0
-  blueMat: {fileID: 2100000, guid: ab1087bf7b3e1214db1f4a2f7220ceac, type: 2}
-  redMat: {fileID: 2100000, guid: 6828403bbf15e9f40b0587c1594138e2, type: 2}
   alarmStateStart: 0
   activatedFireBall: 0
 --- !u!1 &6048877420643439284
@@ -148,7 +149,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2d8dbb196e9a8bb46a52b3fbd77a9982, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
