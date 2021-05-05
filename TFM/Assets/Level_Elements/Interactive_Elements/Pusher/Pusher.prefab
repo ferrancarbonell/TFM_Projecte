@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6514169875519859714}
   - component: {fileID: 6514169875519859715}
   - component: {fileID: 6514169875519859719}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Pusher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -161,6 +161,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Mesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169583510433843121, guid: e8e51c22b4a22be4ea3ba204c1aa13c3,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7169583510433843123, guid: e8e51c22b4a22be4ea3ba204c1aa13c3,
         type: 3}

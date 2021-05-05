@@ -8,6 +8,8 @@ public class FireBallAI : MonoBehaviour
 	public float move = -0.1f;
 	public float distance = 0.5f;
     public GameObject damage;
+    public ParticleSystem fire;
+    public ParticleSystem ice;
 
     private enum EnemyState {alive, inactive}
 	private EnemyState enemyState;
@@ -29,11 +31,15 @@ public class FireBallAI : MonoBehaviour
         {
             enemyState = EnemyState.alive;
             damage.SetActive(true);
+            fire.Play();
+            ice.Stop();
         }
         if (alarmBehaviour.activatedFireBall)
         {
             enemyState = EnemyState.inactive;
             damage.SetActive(false);
+            fire.Stop();
+            ice.Play();
         }
     }
 
