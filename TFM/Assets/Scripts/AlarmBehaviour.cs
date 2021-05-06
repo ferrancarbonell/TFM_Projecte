@@ -71,7 +71,7 @@ public class AlarmBehaviour : MonoBehaviour
             if (activatedFireBall)
                 gameObject.GetComponent<Light>().color = Color.red;
             if (!activatedFireBall)
-                gameObject.GetComponent<Light>().color = Color.cyan;
+                gameObject.GetComponent<Light>().color = Color.white;
 
             activatedFireBall = !activatedFireBall;
         }

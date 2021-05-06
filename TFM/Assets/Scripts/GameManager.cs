@@ -7,16 +7,16 @@ public class GameManager : MonoBehaviour
 {
     public GameObject blackFader;
     public bool isPlayerAlive;
+    private RespawnManager respawnManager;
+    public GameObject flema;
 
     void Start()
     {
-        Application.targetFrameRate = 60;
+        //Application.targetFrameRate = 60;
         isPlayerAlive = true;
-    }
-
-    void Update()
-    {
+        respawnManager = GameObject.FindGameObjectWithTag("Respawn").GetComponent<RespawnManager>();
         
+        flema.transform.position = respawnManager.lastCheckpointPos;
     }
 
     public void GameOver()
@@ -28,15 +28,10 @@ public class GameManager : MonoBehaviour
     {
         isPlayerAlive = false;
         blackFader.GetComponent<Fade>().FadeOut();
-        //GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>().enabled = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<CapsuleCollider>().enabled = false;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().isKinematic = true;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().velocity = Vector3.zero;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
         Debug.Log ("Player death");
         
         yield return new WaitForSeconds(3f);
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
+        //Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
