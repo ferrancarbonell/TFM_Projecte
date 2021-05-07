@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseControl : MonoBehaviour
 {
     public static bool gameIsPaused;
     public GameObject pauseMenu;
+    public GameObject pauseFirstButton;
 
     void Update()
     {
@@ -21,6 +23,8 @@ public class PauseControl : MonoBehaviour
         {
             Time.timeScale = 0f;
             pauseMenu.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(pauseFirstButton);
         }
         else 
         {

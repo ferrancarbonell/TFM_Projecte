@@ -1,8 +1,14 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class MenuManager : MonoBehaviour
-{
+{   public GameObject startFirstButton;
+    void Start()
+    {
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(startFirstButton);
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))

@@ -16,9 +16,9 @@ public class PatrolState : IRobotState
     {
         myEnemy.anim.SetBool("Patrol",true);
         myEnemy.anim.SetBool("Alert",false);
+        myEnemy.myLight.color = Color.cyan;
         myEnemy.navMeshAgent.speed = 0.7f;
         // El enemigo patrulla por los waypoints marcados
-        myEnemy.myLight.color = Color.cyan;
         myEnemy.navMeshAgent.destination = myEnemy.wayPoints[nextWayPoint].position;
         if(myEnemy.navMeshAgent.remainingDistance <= myEnemy.navMeshAgent.stoppingDistance)
         {

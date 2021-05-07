@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -12,10 +12,9 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        //Application.targetFrameRate = 60;
+        Application.targetFrameRate = 60;
         isPlayerAlive = true;
         respawnManager = GameObject.FindGameObjectWithTag("Respawn").GetComponent<RespawnManager>();
-        
         flema.transform.position = respawnManager.lastCheckpointPos;
     }
 
