@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
         isPlayerAlive = true;
         respawnManager = GameObject.FindGameObjectWithTag("Respawn").GetComponent<RespawnManager>();
         flema.transform.position = respawnManager.lastCheckpointPos;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     public void GameOver()

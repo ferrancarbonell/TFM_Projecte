@@ -16,7 +16,7 @@ public class AlarmManager : MonoBehaviour
     void Start()
     {
         alarmState = AlarmState.Blue;
-        afectedObjects = GameObject.Find("AlarmAssets").GetComponentsInChildren<AlarmBehaviour>();
+        SearchElements();
     }
 
     void Update()
@@ -58,5 +58,10 @@ public class AlarmManager : MonoBehaviour
         }
   
         increase = 0;
+    }
+
+    public void SearchElements()
+    {
+        afectedObjects = GameObject.Find("AlarmAssets").GetComponentsInChildren<AlarmBehaviour>();
     }
 }

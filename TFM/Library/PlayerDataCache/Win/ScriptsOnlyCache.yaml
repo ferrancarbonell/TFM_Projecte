@@ -29,7 +29,6 @@ ScriptsOnlyBuild:
     - Invector.vFootStep
     - Invector.vFootStepHandler
     - Invector.vFootStepTrigger
-    - Invector.vGameController
     - Invector.vHitDamageParticle
     - Invector.vItemManager.vChangeInputTypeTrigger
     - Invector.vObjectDamage
@@ -212,8 +211,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4046}
     - Class: 114
-      Script: {instanceID: 4086}
-    - Class: 114
       Script: {instanceID: 4102}
     - Class: 114
       Script: {instanceID: 4142}
@@ -347,6 +344,8 @@ ScriptsOnlyBuild:
     - Class: 49
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -1059,7 +1058,7 @@ ScriptsOnlyBuild:
     className: vLookAtCamera
   - hash:
       serializedVersion: 2
-      Hash: 930b2a7c015542327cee6af349728cdd
+      Hash: 2a6f143023e665887dba8452d7a0b4fc
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseControl
@@ -1305,7 +1304,7 @@ ScriptsOnlyBuild:
     className: vPickupItem
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: dba03773c3eeb92909381840292c1cc5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuManager

@@ -7,6 +7,7 @@ public class RespawnManager : MonoBehaviour
     private static RespawnManager instance;
     public Vector3 lastCheckpointPos;
     public GameObject flema;
+    
     void Awake()
     {
         if(instance == null)
@@ -18,9 +19,5 @@ public class RespawnManager : MonoBehaviour
             Destroy(gameObject);
 
         lastCheckpointPos = flema.transform.position;
-    }
-
-    void Start()
-    {
     }
 }

@@ -8,6 +8,8 @@ public class MenuManager : MonoBehaviour
     {
         EventSystem.current.SetSelectedGameObject(null);
         EventSystem.current.SetSelectedGameObject(startFirstButton);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     void Update()
     {
