@@ -5,6 +5,19 @@ Està encarat a un casual player amb interès en jocs indie i slow games o un se
 <h4>Paraules clau de definició:</h4>
 <p>plataformes, puzles, crítica, emocions, narrativa.</p>
 <h1>Evolució del projecte</h1>
+<h3>09-05-2021</h3>
+<p>https://vimeo.com/547198076 pass: uoc2021</p>
+<h3>07-05-2021</h3>
+![Menu1](https://user-images.githubusercontent.com/74672468/117584426-33ff6980-b10d-11eb-84f2-a6de0f200780.png)
+![Menu2](https://user-images.githubusercontent.com/74672468/117584430-38c41d80-b10d-11eb-8491-a67e98b19040.png)
+<h3>01-05-2021</h3>
+![Puzle2](https://user-images.githubusercontent.com/74672468/117584441-572a1900-b10d-11eb-809d-00e2ddb7e1fd.png)
+<h3>27-04-2021</h3>
+![Puzle1](https://user-images.githubusercontent.com/74672468/117584463-7cb72280-b10d-11eb-8d27-b4fe03e9fca5.png)
+<h3>20-04-2021</h3>
+Nou Character Controller
+<h3>12-04-2021</h3>
+![Level design](https://user-images.githubusercontent.com/74672468/117584413-17fbc800-b10d-11eb-8ac3-e128800df389.png)
 <h3>04-04-2021</h3>
 <p>https://vimeo.com/532843547 pass: uoc2021</p>
 <h3>02-04-2021</h3>
