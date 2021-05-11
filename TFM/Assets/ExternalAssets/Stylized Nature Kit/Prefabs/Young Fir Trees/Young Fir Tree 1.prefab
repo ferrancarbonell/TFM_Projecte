@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3721397945850739546}
   - component: {fileID: 4311793265956826526}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Young Fir Tree 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 7668369649501519066}
   - component: {fileID: 7121765737897196014}
   - component: {fileID: 1010596674743117835}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Young_Fir_Tree_1_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,6 +126,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -151,6 +153,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1010596674743117835
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -161,9 +164,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 3923019439509354870, guid: 57af612288f2cfd4bae00c7c28a1158d, type: 3}
 --- !u!1 &4789362009626264831
 GameObject:
@@ -177,7 +180,7 @@ GameObject:
   - component: {fileID: 4850806150293115148}
   - component: {fileID: 6562015556114256230}
   - component: {fileID: 4760468354628594476}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Young_Fir_Tree_1_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,6 +223,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -245,6 +250,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &4760468354628594476
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -255,9 +261,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 1056479040492642583, guid: 57af612288f2cfd4bae00c7c28a1158d, type: 3}
 --- !u!1 &8142865533588057271
 GameObject:
@@ -271,7 +277,7 @@ GameObject:
   - component: {fileID: 115059600072216789}
   - component: {fileID: 4662363195772155693}
   - component: {fileID: 3487945433494555475}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Young_Fir_Tree_1_LOD4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -314,6 +320,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -339,6 +347,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &3487945433494555475
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -349,9 +358,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -7184001847917430420, guid: 57af612288f2cfd4bae00c7c28a1158d, type: 3}
 --- !u!1 &8210635819637494307
 GameObject:
@@ -365,7 +374,7 @@ GameObject:
   - component: {fileID: 9205524629245521457}
   - component: {fileID: 2775030092476374724}
   - component: {fileID: 6154943828734022701}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Young_Fir_Tree_1_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,6 +417,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -433,6 +444,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &6154943828734022701
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -443,9 +455,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 3200313091726685255, guid: 57af612288f2cfd4bae00c7c28a1158d, type: 3}
 --- !u!1 &8307896291192230061
 GameObject:
@@ -459,7 +471,7 @@ GameObject:
   - component: {fileID: 8123367707188797317}
   - component: {fileID: 6826074394754567525}
   - component: {fileID: 7106598656575556489}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Young_Fir_Tree_1_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -502,6 +514,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -527,6 +541,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &7106598656575556489
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -537,7 +552,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 86095547107850130, guid: 57af612288f2cfd4bae00c7c28a1158d, type: 3}

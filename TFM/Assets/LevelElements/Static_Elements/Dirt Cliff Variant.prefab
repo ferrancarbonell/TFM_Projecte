@@ -1,0 +1,105 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!65 &957381757
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7960949134735741348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 8.46346, y: 4.5761733, z: 4.7968616}
+  m_Center: {x: -0.4429942, y: 1.7880871, z: 0.005983942}
+--- !u!1001 &5157607932175901127
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 4.5707
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.48644212
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5886613
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.022983551
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283925075409404528, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3020077076900507747, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+        type: 3}
+      propertyPath: m_Name
+      value: Dirt Cliff
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8362b3258ec7eb41bd6b0f15927a37c, type: 3}
+--- !u!1 &7960949134735741348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3020077076900507747, guid: f8362b3258ec7eb41bd6b0f15927a37c,
+    type: 3}
+  m_PrefabInstance: {fileID: 5157607932175901127}
+  m_PrefabAsset: {fileID: 0}

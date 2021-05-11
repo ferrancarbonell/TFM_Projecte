@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7410317763299564478}
   - component: {fileID: 3863318642550184334}
   - component: {fileID: 5433332444622952033}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Branch_1_LOD4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55,6 +55,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5433332444622952033
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -89,9 +92,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -2681845146484649861, guid: 9a4335140c2f45c41b91d7aff5e60475, type: 3}
 --- !u!1 &5684049036353184688
 GameObject:
@@ -105,7 +108,7 @@ GameObject:
   - component: {fileID: 2589288500630377597}
   - component: {fileID: 2107230320766323316}
   - component: {fileID: 5790014422368942963}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Branch_1_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -148,6 +151,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -172,6 +177,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5790014422368942963
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -182,9 +188,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -5508521162900484416, guid: 9a4335140c2f45c41b91d7aff5e60475, type: 3}
 --- !u!1 &7694133225742376267
 GameObject:
@@ -196,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6673301929880285016}
   - component: {fileID: 6120332699509684636}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Branch 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -269,7 +275,7 @@ GameObject:
   - component: {fileID: 923979808919482098}
   - component: {fileID: 3360347995414682899}
   - component: {fileID: 6503316373026912820}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Branch_1_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,6 +318,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -336,6 +344,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &6503316373026912820
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -346,9 +355,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 2100527024969032336, guid: 9a4335140c2f45c41b91d7aff5e60475, type: 3}
 --- !u!1 &8836913664168892341
 GameObject:
@@ -362,7 +371,7 @@ GameObject:
   - component: {fileID: 4394451597467050024}
   - component: {fileID: 4313330390715474310}
   - component: {fileID: 1372010581029889544}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Branch_1_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,6 +414,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -429,6 +440,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1372010581029889544
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -439,9 +451,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 8138631053950577904, guid: 9a4335140c2f45c41b91d7aff5e60475, type: 3}
 --- !u!1 &9151122303939352180
 GameObject:
@@ -455,7 +467,7 @@ GameObject:
   - component: {fileID: 3323330723520367787}
   - component: {fileID: 1536931942395960467}
   - component: {fileID: 8563123449651961769}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Branch_1_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,6 +510,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -522,6 +536,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &8563123449651961769
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -532,7 +547,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 1152231559003977566, guid: 9a4335140c2f45c41b91d7aff5e60475, type: 3}
