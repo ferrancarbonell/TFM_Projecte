@@ -2129,4 +2129,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/MainMenu.unity
   - Assets/Scenes/Game.unity
-  playerPath: C:/Users/Ferran/Documents/Unity/TFM_Projecte/Exectuable/TFM.exe
+  playerPath: C:/Users/Ferran/Documents/Unity/Flema Executable/TFM.exe

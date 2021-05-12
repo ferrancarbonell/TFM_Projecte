@@ -22,7 +22,12 @@ public class PatrolState : IRobotState
         myEnemy.navMeshAgent.destination = myEnemy.wayPoints[nextWayPoint].position;
         if(myEnemy.navMeshAgent.remainingDistance <= myEnemy.navMeshAgent.stoppingDistance)
         {
-            nextWayPoint = (nextWayPoint + 1) % myEnemy.wayPoints.Length;
+            if(nextWayPoint < myEnemy.wayPoints.Length -1)
+                nextWayPoint = nextWayPoint + 1;
+            else
+                nextWayPoint = nextWayPoint - 1;
+
+            myEnemy.navMeshAgent.destination = myEnemy.wayPoints[nextWayPoint].position;
         }
         // Si ve el player pasa al estado de atacar
         RaycastHit hit;

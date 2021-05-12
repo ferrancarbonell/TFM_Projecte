@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3880071719056474151}
   - component: {fileID: 4443740280166586083}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Dead Tree 10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 2511608809156685107}
   - component: {fileID: 9067809929589509074}
   - component: {fileID: 5413934851608962309}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Dead_Tree_10_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,6 +126,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -150,6 +152,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5413934851608962309
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -160,9 +163,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -3296560601840111500, guid: 710efccda41154449af811173f6c84df, type: 3}
 --- !u!1 &3416886151084582742
 GameObject:
@@ -176,7 +179,7 @@ GameObject:
   - component: {fileID: 7490544743498149027}
   - component: {fileID: 3071733249530918428}
   - component: {fileID: 2814811451077521625}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Dead_Tree_10_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -219,6 +222,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -243,6 +248,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &2814811451077521625
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -253,9 +259,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -8571423121487484227, guid: 710efccda41154449af811173f6c84df, type: 3}
 --- !u!1 &4309799162312395621
 GameObject:
@@ -269,7 +275,7 @@ GameObject:
   - component: {fileID: 1915457048831501838}
   - component: {fileID: 491234585492051678}
   - component: {fileID: 7455344968584450517}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Dead_Tree_10_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,6 +318,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -336,6 +344,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &7455344968584450517
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -346,9 +355,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -5810454815279227347, guid: 710efccda41154449af811173f6c84df, type: 3}
 --- !u!1 &5580915347764534682
 GameObject:
@@ -362,7 +371,7 @@ GameObject:
   - component: {fileID: 2212474041133075804}
   - component: {fileID: 6634122402538012020}
   - component: {fileID: 7282887943477972629}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Dead_Tree_10_LOD4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -405,6 +414,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -429,6 +440,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &7282887943477972629
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -439,9 +451,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: -4840558521543369599, guid: 710efccda41154449af811173f6c84df, type: 3}
 --- !u!1 &7465184112274117649
 GameObject:
@@ -455,7 +467,7 @@ GameObject:
   - component: {fileID: 7329777484761850208}
   - component: {fileID: 7010564770493244238}
   - component: {fileID: 1511402507333136836}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Dead_Tree_10_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -498,6 +510,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -522,6 +536,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1511402507333136836
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -532,7 +547,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4109135428353026905, guid: 710efccda41154449af811173f6c84df, type: 3}
