@@ -15,7 +15,6 @@ public class AttackState : IRobotState
     {
         myEnemy.anim.SetTrigger("Hit");
         myEnemy.navMeshAgent.isStopped = true;
-        myEnemy.navMeshAgent.autoBraking = false;
     }
 
     public void GoToAlertState(){}

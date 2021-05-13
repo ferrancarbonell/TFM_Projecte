@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 3040788899418919283}
   - component: {fileID: 3192869681455572649}
   - component: {fileID: 1524121980770133062}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Fir_Tree_1_LOD3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7697745890528310661
 Transform:
@@ -56,6 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &1524121980770133062
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -107,12 +109,12 @@ GameObject:
   - component: {fileID: 1677069915801729585}
   - component: {fileID: 6724807074940516197}
   - component: {fileID: 5743608850841007777}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Fir_Tree_1_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2177590589411125316
 Transform:
@@ -151,6 +153,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -176,6 +179,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5743608850841007777
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -202,12 +206,12 @@ GameObject:
   - component: {fileID: 6148370203145701752}
   - component: {fileID: 4322797340979289908}
   - component: {fileID: 2975424341750434771}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Fir_Tree_1_LOD2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &259863913373916561
 Transform:
@@ -246,6 +250,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -271,6 +276,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &2975424341750434771
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -295,12 +301,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7985673686340452312}
   - component: {fileID: 7395281664903719196}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Fir Tree 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7985673686340452312
 Transform:
@@ -368,12 +374,12 @@ GameObject:
   - component: {fileID: 8678828377730308418}
   - component: {fileID: 7743990332448942765}
   - component: {fileID: 8236640832579875740}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Fir_Tree_1_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5322684812873127078
 Transform:
@@ -412,6 +418,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -437,6 +444,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &8236640832579875740
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -463,12 +471,12 @@ GameObject:
   - component: {fileID: 7975961553431468214}
   - component: {fileID: 5244018840219410478}
   - component: {fileID: 8881196250493947078}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: Fir_Tree_1_LOD4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &868853579769175506
 Transform:
@@ -507,6 +515,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -532,6 +541,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &8881196250493947078
 MeshCollider:
   m_ObjectHideFlags: 0

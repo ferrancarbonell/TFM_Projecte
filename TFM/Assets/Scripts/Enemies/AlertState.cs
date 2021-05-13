@@ -14,10 +14,9 @@ public class AlertState : IRobotState
     public void UpdateState()
     {
         myEnemy.myLight.color = Color.red;
-        //myEnemy.ChangeToAlertMaterial();
         myEnemy.anim.SetBool("Patrol",false);
         myEnemy.anim.SetBool("Alert",true);
-        myEnemy.navMeshAgent.speed = 1.5f;
+        myEnemy.navMeshAgent.speed = 2f;
         myEnemy.navMeshAgent.destination = myEnemy.player.transform.position;
 
             // Si encuentra al player pasa al estado Attack
@@ -35,7 +34,6 @@ public class AlertState : IRobotState
                     GoToPatrolState();
                 }
             }
-        //currentRotationTime += Time.deltaTime;
     }
 
     public void GoToAlertState(){}
