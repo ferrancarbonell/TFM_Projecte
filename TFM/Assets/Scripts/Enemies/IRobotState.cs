@@ -1,15 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public interface IRobotState
-{
-    // Interfície para los funciones de los estados
-    void UpdateState();
-    void GoToAttackState();
-    void GoToAlertState();
-    void GoToPatrolState();
-    void OnTriggerEnter(Collider other);
-    void OnTriggerStay(Collider other);
-    void OnTriggerExit(Collider other);
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:3f04b42918499bb2f8489c825f7a5a4a0ee780056c412bcc65d8ed491cb24e9c
+size 412
