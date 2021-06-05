@@ -1,30 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!21 &2100000
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Water_Mat
-  m_Shader: {fileID: -6465566751694194690, guid: a1a53e86d78aa3e4687d8a53ff39817b,
-    type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs: []
-    m_Floats:
-    - RippleSpeed: 2.9
-    - Vector1_2299A77: 5.52
-    - Vector1_97BAA0E3: 0.05
-    - Vector1_F4B19FD8: 28.44
-    m_Colors:
-    - Color_5108C2E3: {r: 0.96385527, g: 0, b: 1, a: 1}
-    - Color_C30CDE0A: {r: 0.6745098, g: 0.39215687, b: 0.9411765, a: 0.36862746}
+version https://git-lfs.github.com/spec/v1
+oid sha256:68527527cd012179b7dee50cc09707324f0ce04f0ac409c92fdcffa928454504
+size 1218
